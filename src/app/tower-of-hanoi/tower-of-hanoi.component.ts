@@ -54,6 +54,7 @@ export class TowerOfHanoiComponent implements AfterViewInit {
       console.log("Tower 1: "+this.tower1+" Tower 2: "+this.tower22+" Tower 3: "+this.tower33);
       if (this.tower33.length === 3 && this.isInOrder(this.tower33)) {
         console.log("You've won the game!");
+        alert("You've won the game!");
       }
     }
   }

@@ -5,10 +5,13 @@
 }
 
 .tower-container {
-  width: 100px;
+  width: 200px;
   height: 300px;
   border: 1px solid;
   margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+  justify-content: space-around;
 }
 
 .disk {

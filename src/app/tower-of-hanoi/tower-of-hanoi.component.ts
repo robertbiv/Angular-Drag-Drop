@@ -16,7 +16,7 @@ import {NgForOf} from "@angular/common";
 export class TowerOfHanoiComponent implements AfterViewInit {
   @ViewChildren(CdkDropList) dropLists: QueryList<CdkDropList> = new QueryList<CdkDropList>();
 
-  tower1:number[]  = [3, 2, 1];
+  tower1:number[]  = [1,2,3];
   tower22:number[]  = [];
   tower33:number[] = [];
 
@@ -34,9 +34,9 @@ export class TowerOfHanoiComponent implements AfterViewInit {
     console.log('Current container ID:', event.container.id);
     console.log(event.container.data);
     console.log(event);
-    if (event.previousContainer === event.container) {
+    if (event.previousContainer === event.container || event.previousIndex !== 0) {
       console.log("Disk not Moved");
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+      /*moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);*/
     } else {
       console.log("Disk Ready to be Moved "+event.item.data);
 /*      transferArrayItem(event.previousContainer.data,
@@ -51,6 +51,7 @@ export class TowerOfHanoiComponent implements AfterViewInit {
           event.currentIndex);
         console.log("Moved disk " + event.item.data + " from tower " + (event.previousIndex + 1) + " to tower " + (event.currentIndex + 1) + ".")
       }
+      console.log("Tower 1: "+this.tower1+" Tower 2: "+this.tower22+" Tower 3: "+this.tower33);
       if (this.tower33.length === 3 && this.isInOrder(this.tower33)) {
         console.log("You've won the game!");
       }
@@ -58,11 +59,14 @@ export class TowerOfHanoiComponent implements AfterViewInit {
   }
 
   isInOrder(tower: number[]): boolean {
+    console.log("Check order")
     for (let i = 0; i < tower.length - 1; i++) {
-      if (tower[i] < tower[i + 1]) {
+      if (tower[i] > tower[i + 1]) {
+        console.log("Not Ordered")
         return false;
       }
     }
+    console.log("Ordered")
     return true;
   }
 }

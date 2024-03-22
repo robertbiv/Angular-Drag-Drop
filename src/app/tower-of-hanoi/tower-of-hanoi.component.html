@@ -8,7 +8,7 @@
     [cdkDropListConnectedTo]="[tower2, tower3]"
     class="ring"
     (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let disk of tower1" cdkDrag>{{disk}}</div>
+    <div class="example-box" *ngFor="let disk of tower1" cdkDrag [cdkDragData]="disk">{{disk}}</div>
     <div class="example-box"> </div>
   </div>
 </div>
@@ -23,7 +23,7 @@
     [cdkDropListConnectedTo]="[tower, tower3]"
     class="ring"
     (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let disk of tower22" cdkDrag>{{disk}}</div>
+    <div class="example-box" *ngFor="let disk of tower22" cdkDrag [cdkDragData]="disk">{{disk}}</div>
     <div class="example-box"> </div>
   </div>
 </div>
@@ -38,7 +38,7 @@
     [cdkDropListConnectedTo]="[tower, tower2]"
     class="ring"
     (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let disk of tower33" cdkDrag>{{disk}}</div>
+    <div class="example-box" *ngFor="let disk of tower33" cdkDrag [cdkDragData]="disk">{{disk}}</div>
     <div class="example-box"> </div>
   </div>
 </div>

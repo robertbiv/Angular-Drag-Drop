@@ -1,0 +1,10 @@
+<br>
+<h1>Sliding Game</h1>
+<button (click)="shuffleGrid()">Shuffle</button>
+<div class="grid" cdkDropList (cdkDropListDropped)="drop($event)">
+  <div *ngFor="let row of grid; let i = index" class="row">
+    <div *ngFor="let cell of row; let j = index" class="cell" [cdkDragDisabled]="!isAdjacent(i, j)" cdkDrag>
+      {{cell}}
+    </div>
+  </div>
+</div>

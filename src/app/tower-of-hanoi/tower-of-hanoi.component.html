@@ -1,7 +1,6 @@
 <h1>Tower of Hanoi</h1>
 <div class="tower-container">
   <h2>Tower 1</h2>
-
   <div
     cdkDropList
     #tower="cdkDropList"
@@ -16,7 +15,6 @@
 
 <div class="tower-container">
   <h2>Tower 2</h2>
-
   <div
     cdkDropList
     #tower2="cdkDropList"
@@ -31,7 +29,6 @@
 
 <div class="tower-container ">
   <h2>Tower 3</h2>
-
   <div
     cdkDropList
     #tower3="cdkDropList"
@@ -43,37 +40,3 @@
     <div class="example-box"> </div>
   </div>
 </div>
-
-<!--
-<div class="container">
-  <div class="tower-container"
-       *ngFor="let tower of towers;
-       let i = index"
-       cdkDropList [cdkDropListData]="tower"
-       [id]="i.toString()"
-       (cdkDropListDropped)="drop($event)">
-    <div class="disk" *ngFor="let disk of tower" cdkDrag [cdkDragData]="disk">{{disk}}</div>
-  </div>
-</div>
--->
-
-
-<!-- tower-of-hanoi.component.html -->
-<!--<p>tower-of-hanoi works!</p>
-<div class="container">
-  <div class="tower-container" *ngFor="let tower of towers; let i = index" cdkDropList id="{{i}}" [cdkDropListConnectedTo]="towers" (cdkDropListDropped)="drop($event)">
-    <div class="disk" *ngFor="let disk of tower" cdkDrag [cdkDragData]="disk">{{disk}}</div>
-  </div>
-</div>-->
-<!-- tower-of-hanoi.component.html
-<p>tower-of-hanoi works!</p>
-<div class="container">
-  <div class="tower-container" *ngFor="let tower of towers; let i = index" [cdkDropList]="i.toString()" [cdkDropListData]="tower" (cdkDropListDropped)="drop($event)">
-    <div class="disk" *ngFor="let disk of tower" cdkDrag [cdkDragData]="disk">{{disk}}</div>
-  </div>
-</div>-->
-<!-- tower-of-hanoi.component.html
-<p>tower-of-hanoi works!</p>
-<div class="tower-container" *ngFor="let tower of towers; let i = index" cdkDropList [id]="i.toString()" [cdkDropListData]="tower" (cdkDropListDropped)="drop($event)">
-  <div class="disk" *ngFor="let disk of tower" cdkDrag [cdkDragData]="disk">{{disk}}</div>
-</div>-->

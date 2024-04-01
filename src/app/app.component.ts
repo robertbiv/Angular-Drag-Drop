@@ -10,5 +10,5 @@ import {TowerOfHanoiComponent} from "./tower-of-hanoi/tower-of-hanoi.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'untitled';
+  title = 'Angular Drag Drop';
 }
